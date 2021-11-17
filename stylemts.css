@@ -537,3 +537,108 @@ a#menuMobile_right2{
 }
 
 /* ===================   Нижняя часть меню  ===================== */
+.nav{
+  z-index: 4;
+}
+.page_subMenu_box{
+  display: flex;
+  position: relative;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  /*border: 1px solid black;*/
+}
+@media screen and (min-width:1225px){
+.page_subMenu_box{
+  justify-content:flex-start;
+  flex-direction: row;
+}
+}
+/*@media screen and (max-width:1225px){
+.page_subMenu_box{
+  
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.page_subMenu_enter{
+  align-self: flex-end;
+}
+}*/
+/* ========= Логотип меню ==============*/
+.page_subMenu_logo{
+    min-width: 150px;
+    height: 75px;
+    margin-left: 2%;
+    background-image: url(../img/logo-mts.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130px 60px;
+    /*border: 1px solid red;*/
+}
+/* ========= основная часть нижнего раздела меню ==============*/
+.page_subMenu_links{
+    display: flex;
+    position: relative;
+    margin-left: 2%;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items: center;
+    height: 75px;
+    width: 50%;
+    /*border: 1px solid blue;*/
+}
+a.menubotton:not(#search){
+    font-size: 12.8px;
+    font-weight: bold;
+    color: #3B3B3B;
+    letter-spacing: .7px;
+    transition: all .3s linear 0s;
+}
+.page_subMenu_links>div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 75px;
+    align-items: center;
+    white-space: nowrap;
+    transition: all .3s ease 0s;
+}
+
+.triangle{
+    width: 20px;
+    height: 20px;
+    transition: all .3s ease 0s;
+    position: absolute;
+    margin-top: 0px;
+  }
+.triangle::after {
+    content: ''; 
+    position: absolute; /*  Чтобы не забыть!!!!!! Абсолютное позиционирование */
+    left: 6px; bottom: 4px; /* Положение треугольника */
+    border: 4px solid transparent; /* Прозрачные границы */
+    border-top: 4px solid black; /* Добавляем треугольник */
+    transition: all .3s ease 0s;
+  }
+a.menubotton:not(#search):hover+.triangle {
+    transition: all .3s linear 0s;
+    transform: rotateZ(180deg);
+  }
+a.menubotton:not(#search):hover+.triangle::after {
+    transition: all 0.3s linear 0s;
+    border-top: 4px solid red;
+  }
+
+a.menubotton {
+    display: block;
+    border-bottom: 3px solid white;
+    padding: 27px 20px 25px 20px;
+    float: left;
+  }
+a.menubotton:not(#search):hover{
+    border-bottom: 3px solid red;
+    transition: all 0.3s linear 0s;
+  } 
+  
+
+/* =======================  Выпадающее вниз субменю ==================== */
