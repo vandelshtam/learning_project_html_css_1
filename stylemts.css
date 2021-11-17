@@ -410,3 +410,26 @@ a#menuMobile_right2{
  /*================Верхняяя часть страницы!!!!!=========================================================================================*/
 /* ======== Меню для desktop устройств ===================================================================
 ============================================================================================================= */
+.pageMenu{
+  /*border: 1px solid red;*/
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+.blockTop a:not(#client):hover{
+  transform: scale(1.008);
+  color: #D90011;
+  transition: all .3s linear 0s;
+  text-shadow: 0px 0px 1.05px red;
+}
+.page_subMenu_links a:not(#search):hover{
+  transform: scale(1.008);
+  color: #D90011;
+  transition: all .3s linear 0s;   
+}
+@media screen and (max-width:1100px){
+  .pageMenu{
+  display: none;  
+}
+}
+/* =====================  Верхняя часть меню  ==================== */
