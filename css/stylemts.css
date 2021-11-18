@@ -642,3 +642,289 @@ a.menubotton:not(#search):hover{
   
 
 /* =======================  Выпадающее вниз субменю ==================== */
+.menubottom, .menubottom a{
+  color: #3B3B3B;
+}
+.menubottom ul{
+  margin-right: 1.5%;
+  list-style-type: none;
+}
+.conection, .finance, .service, .internet, .help{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  overflow: hidden;
+  transition: all 0.3s linear .5s;
+}
+.conection ul li:not(:first-child),.finance ul li:not(:first-child),.service ul li:not(:first-child),
+.internet ul li:not(:first-child),.help ul li:not(:first-child){
+  font-size: 12.8px;
+  letter-spacing: .7px;
+  width: 110px;
+  white-space:pre-wrap;
+  margin-top: 11px;
+  line-height: 17px;
+}
+.conection ul li:first-child,.finance ul li:first-child,.service ul li:first-child,
+.internet ul li:first-child,.help ul li:first-child{
+  font-size: 15px;
+  letter-spacing: .7px;
+  width: 130px;
+  white-space:pre-wrap;
+  margin-top: 15px;
+  font-weight: bold;
+  line-height: 19px;
+}
+a#conectionbotton:hover+span+.conection, .conection:hover, a#financebotton:hover+div+.finance, .finance:hover,
+a#servicebotton:hover+div+.service, .service:hover,a#internetbotton:hover+div+.internet, .internet:hover,
+a#helpbotton:hover+div+.help, .help:hover{
+    height: 360px;
+    margin-top: 438px;
+    transition: all 0.3s linear .5s;
+    background-color: white;
+}
+
+/* =======================  Выпадающее Субменю "Связь". ================= */
+.conection{
+    margin-top: 72px;
+    margin-left: 190px;
+    -webkit-margin-right:-1017px;
+    margin-right: -1017px;
+    width: 1581%;
+    height: 0px;
+    padding-left: 260%;   
+}
+  
+
+
+/* =======================  Выпадающее Субменю "Финансы". ================= */
+.finance{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 200px;
+    align-items: flex-start;
+    margin-right: -1017px;
+    width: 1575%;
+    height: 0px;
+    overflow: hidden;
+    padding-left: 440%;
+    transition: all 0.3s linear .5s;   
+}
+
+/* =======================  Выпадающее Субменю "Сервисы для жизни". ================= */
+.service{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 0%;
+    align-items: flex-start;
+    margin-right: -397%;
+    width: 713%;
+    height: 0px;
+    overflow: hidden;
+    padding-left: 120%;
+    transition: all 0.3s linear .5s;   
+}
+
+
+/* =======================  Выпадающее Субменю "Интернет-магазин". ================= */
+.internet{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 0%;
+    align-items: flex-start;
+    margin-right: -330%;
+    width: 813%;
+    height: 0px;
+    overflow: hidden;
+    padding-left: 170%;
+    transition: all 0.3s linear .5s;
+}
+
+/* =======================  Выпадающее Субменю "Помощь". ================= */
+.help{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 0%;
+    align-items: flex-start;
+    -webkit-margin-left:-465%;
+    margin-right: -465%;
+    width: 1323%;
+    height: 0px;
+    overflow: hidden;
+    padding-left: 230%;
+    transition: all 0.3s linear .5s;  
+}
+
+/* ======================= Блок поиска  ======================== */ 
+.search{
+  width: 120px;
+  height: 45px;
+  /*border: 1px solid red;*/
+  margin-left: 8%;
+  margin-top: 5px;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 50px 50px;
+  padding: 10px 0px 0px 0px;
+} 
+a#search{
+  width: 10%;
+  height: 35px;
+  padding: 0px 10px 0px 55px;
+  border-right: 1px solid  #D4D4D4; 
+  color: #727272;
+  transition: all .3s linear 0s;
+  text-shadow: 0px 0px 1.2px #B3B3B3;
+  letter-spacing: .7px;
+  font-size: 13px;
+}
+/* ========= Правая сторона нижней части меню ==============*/
+.page_subMenu_enter{
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  z-index: 3;
+}
+
+.basket{
+  width: 47px;
+  height: 47px;
+  margin-left: 1%;
+  margin-top: 10px;
+  /*border: 1px solid red;*/
+  background-image: url(../img/basket.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 49px 49px;
+}
+.other{
+  display: flex;
+  flex-direction: column;
+  width: 47px;
+  height: 47px;
+  margin-left: 1%;
+  /*border: 1px solid red;*/
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.other a{
+  position: absolute;
+  max-width: 47px;
+  height: 30px;
+  /*border: 1px solid black;*/
+  padding: 12px;
+}
+.other a:hover+div{
+  transition: all .3s linear .3s;
+  color: red; 
+}
+#other1{
+  width: 47px;
+  height: 47px;
+  /*border: 1px solid green;*/
+  color: #7E868E
+  font-weight:bold;
+  font-size:25px;
+  text-shadow: 0px 0px 1px #B3B3B3;
+  letter-spacing: 1px;
+  white-space:pre-wrap;
+  word-break: break-all;
+  transition: all .3s linear 0s;
+  line-height: 8px;
+  text-align: justify;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+/* ===============. открывающееся меню разные сервисы ================= */
+.menuother {
+  border: .5px solid #D4D4D4;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  width: 630%; height: 0px;
+  margin-top: -655px;
+  box-shadow: 0px 0px 1px .5px #D4D4D4;
+  display: flex;
+  padding: -100px;
+  flex-wrap: wrap;
+  opacity: 0;
+  z-index: 8;
+  /*overflow: hidden;*/
+  background-color: none;
+}
+.menuother::before, .menuother::after {
+  content: ''; 
+  position: absolute;
+  left: 47%; bottom: 468px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #D4D4D4;
+}
+.menuother::after {
+  border-bottom: 10px solid white;
+  bottom: 467px;
+}
+.menuother span{
+  /*border: 1px solid red;*/
+  width: 125px;
+  height: 30px;
+  margin-right: 2px;
+  margin-top: 0px;
+  background-image: url(../img/МТС.jpeg);
+  background-repeat: no-repeat;
+  background-position:left;
+  background-size: 28px 28px;
+}
+.menuother span a{
+  display: block;
+  /*border: 1px solid blue;*/
+  font-size: 12.8px;
+  letter-spacing: .7px;
+  min-width: 125px;
+    /*white-space:pre-wrap;*/
+    /*margin-top: 15px;*/
+  line-height: 17px;
+  color: #3B3B3B;
+  padding-top: 3px;
+  padding-left: 35px;
+}
+  .other a:hover+div+.menuother, .menuother:hover{
+  transition: height 0s linear 0s, 
+  opacity .3s linear .3s, 
+  margin-top 0s linear 0s,
+  background-color 0s linear 0s;
+  height: 470px; 
+  opacity: 1;
+  margin-top: 535px;
+  background-color: white;    
+}
+
+.menuother span a:hover {
+    color:red;  
+}
+
+/* ============ точки в кнопке меню "другие сервисы" =====*/
+
+.enter a{
+margin-left: 20px;
+padding: 17px 32px 17px 32px;
+border-radius: 6px;
+letter-spacing: .7px;
+font-size: 13px;
+color: white;
+background-color: #D20011;
+}
+
+
+/* ========================= Слайдер с картинками Главный ========================= */
