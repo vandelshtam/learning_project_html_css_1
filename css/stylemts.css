@@ -928,3 +928,205 @@ background-color: #D20011;
 
 
 /* ========================= Слайдер с картинками Главный ========================= */
+article #slider2{
+  margin: 0px auto;
+  width: 100%;
+  text-align:left;
+  /*border: 1px solid red;*/
+}
+article #slider2 input[type="radio"]{display: none;}
+article #slider2 label{
+  cursor: pointer;
+  text-decoration: none;
+}
+#slides {
+  padding: 0px;
+  /*border: 1px solid #ccc;*/
+  position: relative;
+  overflow: hidden;
+}
+#overflow{
+  overflow: hidden;
+  width: 100%;
+}
+#slide11:checked ~ #slides .inner{margin-left : 0;}
+#slide12:checked ~ #slides .inner{margin-left: -100%;}
+#slide13:checked ~ #slides .inner{margin-left: -200%;}
+#slide14:checked ~ #slides .inner{margin-left: -300%;}
+#slides .inner{
+    transition: margin-left .5s linear;
+    width: 400%;
+    line-height: 0;
+    height: 415px;
+}
+#slides .slide{
+    width: 25%;
+    float: left;
+    display: block;
+    color: white;  
+}
+#slides .slide_1,#slides .slide_2,#slides .slide_3,#slides .slide_4{
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    overflow: hidden;
+}
+#slides .slide_1{background-image: url(../img/slider1.png);}
+#slides .slide_2{background-image: url(../img/slider2.png);}
+#slides .slide_3{background-image: url(../img/slider3.png);}
+#slides .slide_4{background-image: url(../img/slider4.png);}
+.slide-content{padding: 20px;}
+
+.inner h2{
+  position: absolute;
+  margin-top: 270px;
+  font-weight: bold;
+  margin-left: 5%;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.inner p a{
+  /*position: absolute;*/
+  font-size: 22px;
+  color: white;
+  text-shadow: 0px 0px 2px  black;
+  /*color: #3B3B3B;*/
+  letter-spacing: .7px;
+  transition: all .3s linear 0s;
+}
+.inner p {
+position: absolute;
+  margin-left: 5%;
+  text-align: left; 
+  margin-top: 320px;
+}
+.inner p a:hover{
+  text-shadow: 0px 0px 1px  black;
+  color: red;
+}
+.inner h6{
+position: absolute;
+  margin-top: 220px;
+  margin-left: 5%;
+  text-align: left;
+  white-space: pre-wrap;
+}
+#controls{
+  margin: -105px 0px 0 88%;/*положение боковой кнопки*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  transition:all .7s ease-out;  
+}
+#controls label{
+  transition: all 0.7s ease-out; /* background-color .7s ease-out, color .7s ease-out;*/
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .6;
+  border-radius: 50%;
+  background-image:url(../img/st2.png); /* боковая кнопка навигации*/
+  background-color: #A4A4A4;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 100%; 
+}
+#controls label:hover{
+  opacity: 1;
+  color: white;
+  /* боковая кнопка навигации*/
+  background-color: red;
+  transition: all 0.7s ease-out;
+}
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1){
+  border: 1px solid white;
+  box-shadow: 0px 0px 1px 1px grey;
+  float: left;
+  margin: 0 0 -50px 0px;
+  display: block;   
+}
+#bullets{
+  position: absolute;
+  margin: -40px 0 0 45%;/*положение нижник кнопок управления*/
+  text-align: center;
+  z-index: 4 ;   
+}
+#bullets label{
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: red;/*нижние кнопки*/
+  margin: 10px 5px;
+  z-index: 1;
+}
+#bullets:checked ~ #bullets label:nth-child(1),
+#bullets:checked ~ #bullets label:nth-child(2),
+#bullets:checked ~ #bullets label:nth-child(3),
+#bullets:checked ~ #bullets label:nth-child(4){
+  background-color: white;
+}
+@media screen and (max-width: 500px){
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1),
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1){margin:0;}
+
+}
+@media screen and (min-width: 600px){
+#slides .slide{
+  height: 370px;   
+}
+.inner h6{
+  color: white;
+  text-shadow: 0px 0px 2px  black;
+  font-size: 1.6rem;
+}
+.inner h2{
+font-size: 3rem;
+text-shadow: 0px 0px 2px  black;
+color: white;
+}
+.inner p a{
+font-size: 1.3rem;
+color: white;
+text-shadow: 0px 0px 2px  black;
+}
+}
+@media screen and (max-width: 600px){
+  #slides .slide{
+    height: 187px;   
+}
+.inner h6{
+  color:gray;
+  text-shadow: none;
+  font-size: 1.3rem;
+} 
+.inner h2{
+font-size: 2rem;
+text-shadow: none;
+color:gray;
+}
+.inner p a{
+font-size: 1.1rem;
+color: grey;
+text-shadow: none;
+}
+  } 
+/* ============= основная часть страницы main ============ */
+/* ============ Блоки мой МТС и пополнение  ===============. */ 
