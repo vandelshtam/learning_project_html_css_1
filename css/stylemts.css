@@ -1130,3 +1130,53 @@ text-shadow: none;
   } 
 /* ============= основная часть страницы main ============ */
 /* ============ Блоки мой МТС и пополнение  ===============. */ 
+main{
+  width: 100%;
+  background-color: #E6E7EF;
+  /*border: 1px solid red;*/
+}
+
+.myMTS_replenish{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:  space-between;
+  margin-top: 10px;
+  width: 100%;
+  z-index: 30;
+}
+@media screen  and (max-width: 1100px){
+  .myMTS,.replenish{
+    width: 95%; 
+  }
+  .myMTS p{
+      letter-spacing: .7px;
+      font-size: 1.4rem;   
+  }
+}
+@media screen and (min-width: 1100px){
+  .myMTS,.replenish{
+    width: 46.5%; 
+  }
+  .myMTS p{
+    letter-spacing: .7px;
+    font-size: 1.1rem;   
+}
+}
+  .replenish{
+    margin-right: 2.3%;
+  }
+  .myMTS,.replenish{
+    background-color: #FFFFFF;
+    /*height: 270px;*/
+    border-radius: 7px;
+    margin-left: 2.3%;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    
+  }
+  .myMTS:hover,.replenish:hover{
+    box-shadow: 0px 0px 40px 10px #D1D1D1;
+  }
+
+/*. ============ Блок main - Блок Мой МТС  =========================*/
