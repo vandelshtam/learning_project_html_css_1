@@ -1180,3 +1180,307 @@ main{
   }
 
 /*. ============ Блок main - Блок Мой МТС  =========================*/
+.myMTS{
+  background-image: url(../img/mymts.jpeg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 200px 250px;
+}
+.myMTS a{
+  /*position: absolute;*/
+    margin-left: 0px;
+    margin-top: 80px;
+    padding: 17px 32px 17px 32px;
+    border-radius: 6px;
+    letter-spacing: .7px;
+    font-size: 13px;
+    color: white;
+    background-color: #D20011;
+}
+.myMTS h3{
+    /*position: absolute;*/
+    margin-left: 30px;
+    margin-top: 20px;
+    color: #262626;
+    letter-spacing: .7px;
+    font-size: 1.5rem;
+    letter-spacing: .7px;
+    text-shadow: 0 0 1px #8B8B8B;
+}
+.myMTS p{
+  width: 55%;
+    /*position: absolute;*/
+    margin-left: 30px;
+    margin-top: 50px;
+    color: #262626;
+    letter-spacing: .7px;
+    font-size: 1.1rem;   
+}
+/* ============= Блок main раздел - поплнить онлайн =======. */
+.replenish h3{
+    /*position: absolute;*/
+    text-align: center;
+    margin-top: 20px;
+    color: #262626;
+    letter-spacing: .7px;
+    font-size: 1.5rem;
+    letter-spacing: .7px;
+    text-shadow: 0 0 1px #8B8B8B;
+}
+.elem input{
+    opacity: 0;
+    
+  }
+    
+.elem input:checked+label{
+    color:red;
+    border-bottom: 3px solid red; 
+    }
+
+
+.elem label{
+    margin-left: 1%;
+        /*border: 1px solid red;*/ 
+    color: #3B3B3B;
+    font-size: .8rem;
+    padding: 10px 10px 15px 10px;
+    border-bottom: 3px solid white;
+    transition: all .3s ease 0s;
+    }
+.elem{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid #D4D4D4;
+      
+    }
+.elem2 input{
+    color: red;
+    }
+.elem2 input:checked+label{
+    color:red;
+       
+    }
+.elem2{
+    display: flex;
+    justify-content: center;
+  /*border: 1px solid red;*/
+    margin-top: 20px;
+      /*position: absolute;*/
+    margin-left: 0%; 
+    }
+.elem2 label{
+    margin-bottom:10px;
+        /*border: 1px solid red;*/
+    color: #3B3B3B;
+    font-size: .9rem;
+    padding: 0px 10px 0px 10px;
+    }
+.nput_forms_button::placeholder{
+    color: #3B3B3B;
+    background-color: #E0E0E0;
+    }
+#input10{
+    color: #3B3B3B;
+    background-color: #E0E0E0;
+    width: 6%;
+    text-align: center;
+    }
+.elem3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    height: 40px;
+    }
+.elem3 *:not(:first-child) {
+    margin-right: 5px; 
+    
+}
+.nput_forms_button, .nput_forms{
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    }
+#input8{
+    width: 18%;
+    }
+#input9{
+    width: 30%;
+    }
+#input7{
+    width: 24%;
+    }
+.nput_forms:hover{
+    color: white;
+    background-color: red;
+    }
+a#button_enter{
+  /*position: absolute;*/
+    margin-left: 4px;
+    
+    padding: 14px 3px 2.5px 3px;
+    border-radius: 3px;
+    letter-spacing: .7px;
+    font-size: 13px;
+    color: #3B3B3B;
+    background-color: #E0E0E0;
+    transition: all 0.7s ease-out
+}
+a#button_enter:hover{
+    color: white;
+    background-color: #D20011;
+
+}
+/*#optional_field{
+  position: absolute;
+  color: #626262;
+  opacity: .5;
+  font-size: .8rem;
+  margin-left: 310px;
+  margin-top: 0px;
+}*/
+
+.elem4{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+    height: 60px;
+    /*border: 1px solid blue;*/
+    margin-top: 20px;
+    background-image: url(../img/Payment-Methods.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40%;
+}
+.elem4 a{
+  
+    margin-left: 15px;
+    color: #3B3B3B;
+    font-size: .9rem;
+    transition: all 0.7s ease-out;
+}
+.elem4 a:hover{
+    color: #D20011;
+}
+/*. ======================= Полезные сервисы =================== */
+/* стили для всех элементов  блока  "Полезные сервисы" */
+.useful_services{
+  width: 100%;
+      /*border: 1px solid black;*/
+  margin: 0 auto;
+}
+/* изменение (адаптивность) размера всех элементов  которые лежат блока "Полезные сервисы"*/ 
+@media screen  and (max-width: 800px){
+  .tariffs_servises{
+    width:97%;   
+}
+  .tariffs3 a{
+    letter-spacing: .6px;
+    font-size: .8rem;    
+}
+}
+@media screen and (min-width: 800px){
+  .tariffs_servises{
+      width:48.5%;   
+}
+  .tariffs3 a{
+    letter-spacing: .7px;
+    font-size: 1.1rem; 
+}
+}
+/* стили дополнительного блока, который лежит в блоке "Полезные сервисы" 
+в котором лежат внутренние блоки (бонус, ритейл, финансы и т д)*/
+.useful{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:  space-between;
+  width: 100%;
+  /*border: 1px solid red;*/
+  margin-top: 10px; 
+  padding: 2.5%; 
+}
+
+/* Стили внутренних блоков (ритейл, финансы, бонус и т д)*/
+.tariffs_servises{
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content:  flex-start;
+  align-items: flex-start;
+  /*border: 1px solid red;*/
+  margin-top: 10px;  
+}
+/*Стили основного внутреннего текста-ссылки внутри  блоков (финансы, бонус, ритейл и т д)*/
+.tariffs3:hover{
+  box-shadow: 0px 0px 40px 10px #D1D1D1;
+}
+.tariffs3{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          /*border: 1px solid red;*/
+          background-repeat: no-repeat;
+          background-position: right;
+          background-size:180px 180px;
+          width: 100%;
+          height: 180px;
+          border-radius: 7px;
+          background-color: #FFFFFF;
+      }
+/* Стили названий внутренних блоков (бонус, таривы и т д) */
+.tariffs{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:  flex-start;
+  align-items: flex-start;
+  /*border: 1px solid red;*/
+}
+
+.tariffs3 a{
+  display: block;
+  transition: all 0.7s ease-out;
+  color: #262626; 
+    /*border: 1px solid red;*/
+  padding: 50px 40% 50px 40px; 
+}
+
+.tariffs3 a:hover{
+  color: red;
+}
+.tariffs a{
+  color: black;
+  font-weight: bold;
+  transition: all 0.7s ease-out;
+}
+a.tariffs1{
+  font-size: 2rem;
+  position:relative;
+  margin-top: 5px;
+  z-index: 1;
+  margin-left: -160px;
+}
+
+a.tariffs_tariffs:hover+a.tariffs1, a.tariffs_tariffs:hover+a+a {color: red;}
+
+a.tariffs_tariffs{/*скрытая ссылка для подсветки названий блоков*/
+  /*border: 2px solid black;*/
+  display:;
+  width:190px;
+  padding: 10px 0px 10px 20px;
+  transition: all 0.7s ease-out;
+  opacity: 0;
+  z-index: 3;
+}
+a.tariffs2{
+  font-size: .4rem;
+  position:relative;
+  margin-left: -20px;
+  z-index: 2;
+}
+/*================= блок тарифы ======================= */
