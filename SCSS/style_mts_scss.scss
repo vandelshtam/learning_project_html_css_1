@@ -1,0 +1,182 @@
+@keyframes animHalp_mia{
+    0%,100%{
+        transform: rotateY(0deg) scale(1);
+    }
+    20%{
+        transform: rotateY(180deg) scale(0);
+    }
+    40%{
+        transform: rotateY(180deg) scale(1);
+    }
+    60%{
+        transform: rotateY(0deg) scale(1);
+    }
+    80%{
+        transform: rotateY(0deg) scale(1);
+    }
+
+}
+@mixin mia($w,$h) {
+    width: $w;
+    height: $h;
+}
+//главный Див к которому привязаны все внутренние дивы, он позиционируется на странице
+#halp_big{
+    @include  mia(1px,1px);
+    margin-left: 90%;
+    margin-top: -50px;
+    position: fixed;
+    left: 90%;
+    top:108%;
+    z-index: 60;
+}
+//Анимированный див, открывается при наведении, появляется форма ввода вопроса и главная картинка бота МИа
+#halp{
+    @include  mia(80px,100px);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .5s ease-out;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+    z-index: 2;
+    &:hover{
+        width: 200px;
+        height: 400px;
+        margin-top: -400px;
+        margin-left: -100px;
+        border: 2px solid grey;
+    
+    }
+    &:hover+#halp_mia{
+        opacity: 0;
+    }
+    &:hover #halp_mia_big{
+        
+        height: 37%;
+        /*border: 2px solid grey;*/
+    }
+    &:hover #halp_text_form{
+        
+        height: 63%;
+        /*border: 2px solid grey;*/
+    }
+    &:hover #halp_text{
+        opacity: 0;
+        height: 0%;
+        border: none;
+    }
+    
+    //формы ввода вопроса для бота Миа
+    #halp_text_form{
+        @include  mia(100%,0%);
+        overflow: hidden;
+        border: none;
+        background-color: rgb(245, 23, 11);
+        /*border-radius: 0px 0px 10px 10px;*/
+        transition: all 1s ease-out;
+        margin-top: 0px;
+        z-index: 65;
+        #form_text{
+            margin:5px auto;
+            @include  mia(90%,30%);
+            resize: vertical;
+            transition: all 1s ease-out;
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #EBECF3;
+        }
+        #form_text2{//Приветствие от Миа
+            padding: 5px;
+            margin: 5px auto;
+            @include  mia(90%);
+            border-radius: 10px;
+            border: 1px solid grey;
+            background-color: #EBECF3;
+            font-size: .8rem;
+            transition: all 1s ease-out;
+        }
+        #form_text3{//окно ввода контактных данных для обратной связи
+            margin: 5px auto;
+            @include  mia(90%,25px);
+            border-radius: 5px;
+            border: 1px solid grey;
+            transition: all 1s ease-out;
+            background-color: #EBECF3;
+            font-size: .6rem;
+        }
+        #form_text1{//кнопка отправки вопроса
+            color: grey;
+            font-weight: bold;
+            margin: 5px auto;
+            @include  mia(90%,25px);
+            border-radius: 5px;
+            border: 1px solid grey;
+            transition: all 1s ease-out;
+            background-color: #EBECF3;
+        }
+        #form_text1:hover{
+            color: rgb(245, 23, 11);
+        }
+    }
+    //Большая картинка бота Миа при наведении
+    #halp_mia_big{
+        @include  mia(90%,0%);
+        border: none;
+        /*border-radius: 10px 10px 0px 0px;*/
+        transition: all 1s ease-out;
+        /*border: 1pz solid green;*/
+        z-index: 62;
+        background-image: url(../img/halpbot.png);
+        background-repeat:no-repeat ;
+        background-position: center;
+        background-size: 100%;
+        
+    }
+    //надпись "помощь" под иконкой анимации Миа
+    #halp_text{
+            height: 20%;
+            color: grey;
+            text-shadow: 0px 0px 1px 1px grey;
+            border: 1px solid gray;
+            background-color: #EBECF3;
+            border-radius: 10px;
+            text-align: center;
+            opacity: 1;
+            transition: all 1s ease-out;
+            opacity: 1;
+        }
+}
+// анимированная иконка бота Миа в состоянии ожидания
+#halp_mia{
+    @include  mia(80px,80px);
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid red;
+    background-color: rgb(120, 240, 220);
+    background-image: url(../img/mia.jpeg);
+    background-repeat:no-repeat ;
+    background-position: center;
+    position: relative;
+    background-size: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    animation: animHalp_mia 10s infinite linear 3s;
+    margin-top: -180px;
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    &:hover+#halp{
+        width: 200px;
+        height: 400px;
+        margin-top: -400px;
+        margin-left: -100px;
+        border: 2px solid grey;
+    }
+    &:hover{
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+      }
+}

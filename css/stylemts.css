@@ -1832,4 +1832,274 @@ a#post1 {
 #sl_i24:target ~ #slideshow2 .c_slider2                { background-position: -100% 0, -66.66666666% 0, -33.33333333% 0, 0 0; }
 
 /*  =========  footer ================= */
+footer{
+  background-color: #EBECF3;
+  width: 100%;
+}
+/*  =========  footer top верхняя часть футера ================= */
+  .footer_top{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-top: 1px solid gray;
+  }
+  .footer_top_left{width: 60%;}
+
+  .footer_top_left h3{
+      color: black;
+      letter-spacing: .7px;
+      font-size: 1.1rem;
+      margin-top: 25px;
+      margin-left: 40px; 
+  }
+  .footer_top_left p{
+      color: black;
+      letter-spacing: .7px;
+      font-size: .9rem;
+      margin-top: 20px;
+      margin-left: 40px;
+      width: 80%;
+  }
+  .footer_top_right{
+      width: 39%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+  .footer_top_right ul{
+      letter-spacing: .7px;
+      font-size: .8rem;
+      margin-top: 20px;
+      margin-left: 20%;
+      line-height: 40px;
+      list-style-type: none;
+  }
+  .footer_top_right ul a{
+      color: #7E7F7E;
+      transition: all 0.7s ease-out;
+  }
+  .footer_top_right ul a:hover{
+      color: red;
+      transition: all 0.7s ease-out;
+    }
+/*  =========  footer bottom средняя часть футера ================= */
+      .footer_bottom{
+          width: 100%;
+          border-top: 1px solid gray;
+      }
+      #footer_bottom_up{
+          width: 100%;
+          /*border: 3px solid green;*/
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 600px){
+        .footer_bottom_parent{
+            width:96%;   
+        } 
+        #footer_bottom_up_right{
+            width:96%;
+        }  
+      }
+      @media screen and (min-width: 800px) and (max-width: 1100px){
+        #footer_bottom_up_left{
+            width:96%;   
+        }
+        #footer_bottom_up_center{
+            width:96%;
+        } 
+        .footer_bottom_parent{
+          width:58%;   
+      } 
+      #footer_bottom_up_right{
+          width:42%;
+      }   
+      }
+      @media screen and (min-width: 1100px){
+        #footer_bottom_up_left{
+            width:40%;   
+        }
+        #footer_bottom_up_center{
+            width:60%;
+        } 
+        .footer_bottom_parent{
+            width:58%;   
+      } 
+        #footer_bottom_up_right{
+            width:42%;
+      }   
+      }
+
+/*=======левая часть среднего раздела футера=====*/
+          .footer_bottom_parent{
+              /*border: 1px solid red;*/
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+          }
+          
+
+          #footer_bottom_up_left p{
+              margin-top: 20px;
+              margin-left: 8%;
+              /*border: 1px solid black;*/
+              color:black;
+              letter-spacing: .7px;
+              font-size: .9rem;
+          }
+          div#footer_bottom_span{
+              margin-top: 30px;
+              /*border: 1px solid blue;*/
+              margin-left: 4%;
+              width: 90%; 
+          }
+
+          #footer_bottom_up_left a{
+              background-repeat: no-repeat;
+              background-position:center;
+              background-size: cover;
+              border-radius: 50%;
+              /*border: 1px solid red;*/
+              display: blok;
+              padding: 10px 18px 10px 18px;
+              margin-left: 5px;
+              transition: all 0.7s ease-out;
+          }
+          #instagram{
+              background-image: url(../img/instagram.jpeg);
+              color:white;
+          }
+          #instagram:hover{
+              background-image: url(../img/instagramcolor.jpeg);
+          }
+          #face{
+              background-image: url(../img/f.jpeg);
+          }
+          #face:hover{
+              background-image: url(../img/fcolor.jpeg);
+          }
+          #twitter{
+              background-image: url(../img/twitter.jpeg);
+          }
+          #twitter:hover{
+              background-image: url(../img/twittercolor.jpeg);
+          }
+          #vk{
+              background-image: url(../img/vk.jpeg);
+          }
+          #vk:hover{
+              background-image: url(../img/vkcolor.jpeg);
+          }
+          #scool{
+              background-image: url(../img/scool.jpeg);
+          }
+          #scool:hover{
+              background-image: url(../img/scoolcolor.jpeg);
+          }
+          #telegram{
+              background-image: url(../img/telegram.jpeg);
+          }
+          #telegram:hover{
+              background-image: url(../img/telegramcolor.jpeg);
+          }
+/*=========центральня часть стреднего раздела футера=======*/
+          #footer_bottom_up_center{
+              /*border: 1px solid blue;*/
+              padding-left: 6%;
+          }
+          #footer_bottom_up_center a{
+              margin-top: 20px;
+              background-repeat: no-repeat;
+              background-position:center;
+              background-size: 95%;
+              border-radius: 7px;
+              border: 1px solid grey;
+              display: blok;
+              padding: 9px 52px 9px 52px;
+              margin-left: 5px; 
+          }
+          #footer_bottom_up_center p{
+              margin-top: 20px;
+              margin-bottom: 30px;
+              color:black;
+              letter-spacing: .7px;
+              font-size: .9rem;
+              margin-left: 3%;
+          }
+          #appleStore{
+              background-image: url(../img/applestore.jpeg);
+              color:white;
+          }
+          #appleStore,#appGallery,#googlePlay{
+              background-repeat: no-repeat;
+              background-position:center;
+              background-size: cover;
+          }
+          #appleStore:hover,#appGallery:hover,#googlePlay:hover{
+              cursor: pointer;
+          }
+          #googlePlay{
+              background-image: url(../img/googleplay.jpeg);
+          }
+
+          #appGallery{
+              background-image: url(../img/appgallery.jpeg);
+          }
+          /*=========правая часть  среднего раздела футера=======*/
+          
+          .footer_bottom_up_right_ul{
+              color: #7E7F7E;
+              width: 97%;
+              /*border: 1px solid green;*/
+              display: flex;
+              margin-left: 3%;
+              margin-top: 20px;
+              flex-wrap: wrap;
+          }
+          #footer_bottom_up_right a{
+              color: #7E7F7E;
+              letter-spacing: .7px;
+              font-size: .8rem;
+              transition: all 0.7s ease-out;
+          }
+          #footer_bottom_up_right a:hover{
+              color:red;
+          }
+          .footer_bottom_up_right_ul {
+              float: left;
+              /*border: 1px solid black;*/
+          }
+          .footer_bottom_up_right_ul li:first-child{
+              list-style-type: none;
+          }
+          .footer_bottom_up_right_ul li{
+              width: 33%;
+              /*border: 1px solid red;*/
+          }
+        /*========= нижняя часть нижнего раздела футера=======*/
+              #footer_bottom_down p{
+                  text-align: left;
+                  margin: 40px 0px 40px 3%;
+                  color: #7E7F7E;
+                  letter-spacing: .7px;
+                  font-size: .8rem;
+                  width: 60%;
+                  white-space: pre-wrap;
+                  padding-top: 10px;
+              }
+              #footer_bottom_down{
+                  width: 100%;
+                  height: 40px;
+                  margin-top: 50px;
+                  background-image: url(../img/bank.jpeg);
+                  background-repeat: no-repeat;
+                  background-position:right;
+                  background-size: 25%;
+                  /*border: 1px solid red;*/
+              }
       
